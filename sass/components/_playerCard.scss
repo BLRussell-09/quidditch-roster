@@ -1,5 +1,52 @@
-.player-list {
-  display: flex;
-  flex-flow: row wrap;
-  list-style-type: none;
+@import '../variables';
+
+%player-team {
+  align-items: center;
+  background-color: $gold;
+  border-radius: 2px;
+  box-shadow: $box-shadow;
+  h5, h3 {
+    @include default-font(1em);
+  }
+  .img-holder {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+  img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+  margin: 1%;
+  width: 18%;
+}
+
+.player-team-gryffindor {
+  @extend %player-team;
+  h3 {
+    color: $gryffindor
+  }
+}
+.player-team-hufflepuff {
+  @extend %player-team;
+  h3 {
+    color: $hufflepuff
+  }
+}
+.player-team-ravenclaw {
+  @extend %player-team;
+  h3 {
+    color: $ravenclaw
+  }
+}
+.player-team-slytherin {
+  @extend %player-team;
+  h3 {
+    color: $slytherin
+  }
 }
